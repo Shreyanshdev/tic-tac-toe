@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif" ;
+}
+
+.wrapper{
+    height: 100vh;
+    width:  100vw;
+    background-image: url(./images/gradient-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+}
+
+.gameinfo {
+    color: white;
+    position:absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255 ,255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255 ,255, 0.25);
+    text-align: center;
+    padding: 0.5rem 3rem;
+}
+
+.tictactoe {
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255,255 ,255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255 ,255, 0.25);
+    padding: 2rem;
+    place-items: center;
+    display: grid;
+    grid-template-columns:  repeat(3 , 1fr);
+    aspect-ratio: 1/1;
+}
+
+.box{
+    color: white;
+    /* position: relative; */
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+    width: 100%;
+    transition: all 150ms ease-in-out;
+}
+
+.box1,.box2,.box5,.box4{
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.box3,.box6{
+    border-bottom: 2px solid #fff;
+}
+
+.box7,.box8{
+    border-right: 2px solid #fff;
+}
+
+.btn {
+    color: white;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255 ,255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255 ,255, 0.25);
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    display: none;
+
+}
+
+.btn.active {
+    display: flex;
+}
+
+.win {
+    background-color: rgba(0,255,0,0.3 );
+}
+ 
